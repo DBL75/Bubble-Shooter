@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bomb Skill Bubble Shooter</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div>
+        <p class="badge">객체지향프로그래밍 과제 7 · Flask Web Framework</p>
+        <h1>Bomb Skill Bubble Shooter</h1>
+        <p class="desc">
+          기존 중력 왜곡 스킬 대신 실전성이 높은 <strong>폭탄 버블 스킬</strong>을 추가한 웹 버전 버블 슈터입니다.
+          점수를 얻고 스킬 게이지를 채운 뒤 E 키로 폭탄 버블을 장전해 주변 버블을 한 번에 제거할 수 있습니다.
+        </p>
+      </div>
+      <div class="control-card">
+        <div><b>조준</b><span>← → / A D</span></div>
+        <div><b>발사</b><span>Space</span></div>
+        <div><b>폭탄 장전</b><span>E</span></div>
+        <div><b>재시작</b><span>R</span></div>
+      </div>
+    </section>
+
+    <section class="game-shell">
+      <canvas id="gameCanvas" width="1000" height="860"></canvas>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='game.js') }}"></script>
+</body>
+</html>
